@@ -1,4 +1,4 @@
-import {createGlobalStyle} from 'styled-components'
+import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyles = createGlobalStyle`
   * {
@@ -16,4 +16,11 @@ export const GlobalStyles = createGlobalStyle`
     line-height: 1.5;
     font-weight: 400;
   }
-`
+
+  a,
+  a:hover,
+  a:focus {
+    color: inherit;
+    text-decoration: none;
+  }
+`;

@@ -1,23 +1,26 @@
-import { HeaderContainer } from "./styles";
+import { NavLink } from "react-router-dom";
+import { Button } from "../Button/styles";
+import { Navbar } from "../Navbar";
+import { HeaderAccessButtons, HeaderContainer, HeaderContent } from "./styles";
 
-export function Header () {
-  return(
+export function Header() {
+  return (
     <HeaderContainer>
-      <span>Login</span>
+      <HeaderContent>
+        <NavLink to="/" id="logo">
+          Turf
+        </NavLink>
 
-      <nav>
-        <ul>
-          <li>Home</li>
-          <li>Destination</li>
-          <li>Blog</li>
-          <li>About</li>
-        </ul>
-      </nav>
+        <Navbar />
 
-      <div>
-        <button>Login</button>
-        <button>Register</button>
-      </div>
+        <HeaderAccessButtons>
+          <Button variant="default">Login</Button>
+
+          <NavLink to="/">
+            <Button variant="primary">Register</Button>
+          </NavLink>
+        </HeaderAccessButtons>
+      </HeaderContent>
     </HeaderContainer>
-  )
+  );
 }
