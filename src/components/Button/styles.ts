@@ -47,4 +47,15 @@ export const Button = styled.button<ButtonProps>`
         border-color: ${(props) => props.theme["gray-500"]};
       }
     `}
+
+  ${({ variant }) =>
+    variant === "secondary" &&
+    css`
+      color: ${(props) => props.theme.white};
+      background-color: ${(props) => props.theme["orange-200"]};
+
+      &:hover {
+        border-color: ${(props) => props.theme.white};
+      }
+    `}
 `;
